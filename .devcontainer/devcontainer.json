@@ -3,11 +3,5 @@
 	"name": "aelf workshop devcontainer",
 	"build": {
 		"dockerfile": "Dockerfile"
-	},
-	"remoteUser": "node",
-	"features": {
-		"ghcr.io/devcontainers/features/dotnet:2": {
-			"version": "7.0"
-		}
 	}
 }
