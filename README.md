@@ -12,3 +12,9 @@
 ```bash
 devcontainer build --workspace-folder . --push false --image-name aelfinity-workshop
 ```
+
+## Building and pushing the image
+
+```bash
+devcontainer build --workspace-folder . --push true --image-name aelfinity-workshop
+```
