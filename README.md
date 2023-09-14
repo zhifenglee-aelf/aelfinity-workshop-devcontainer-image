@@ -18,3 +18,7 @@ devcontainer build --workspace-folder . --push false --image-name aelfinity-work
 ```bash
 devcontainer build --workspace-folder . --push true --image-name aelfinity-workshop
 ```
+
+## References
+
+[Dev Containers CLI](https://github.com/devcontainers/cli)
