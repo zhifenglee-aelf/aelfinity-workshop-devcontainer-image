@@ -7,12 +7,6 @@
 - Install nodejs
 - Install the cli using `npm install -g @devcontainers/cli`
 
-## Building the image
-
-```bash
-devcontainer build --workspace-folder . --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --image-name aelf/aelfinity-workshop --push false
-```
-
 ## Building and pushing the image
 
 ```bash
