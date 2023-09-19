@@ -10,7 +10,7 @@
 ## Building and pushing the image
 
 ```bash
-devcontainer build --workspace-folder . --platform linux/amd64 --image-name aelf/aelfinity-workshop --push true
+devcontainer build --workspace-folder . --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --image-name yongenaelf/aelfinity-workshop --push true
 ```
 
 ## References
