@@ -5,11 +5,11 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"features": {
-		"ghcr.io/devcontainers/features/dotnet:2": {}
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "latest"
+		}
 	},
-	"mounts": [
-		"source=${localWorkspaceFolder}/.devcontainer/protoc,target=/root/.nuget/packages/aelf.tools/1.0.2/tools/linux_arm64/protoc,type=bind,consistency=cached"
-	],
+	"postCreateCommand": "apt-get update && apt-get install -y protobuf-compiler",
 	"containerUser": "vscode",
 	"remoteUser": "root"
 }

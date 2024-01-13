@@ -16,8 +16,8 @@ Type `reopen` and choose `Dev Containers: Reopen in Container`.
 ## Building and pushing the image
 
 ```bash
-docker buildx create --platform linux/amd64 --use
-devcontainer build --workspace-folder . --platform linux/amd64 --image-name yongenaelf/aelfinity-workshop --push false
+docker buildx create --platform linux/arm64/v8,linux/amd64 --use
+devcontainer build --workspace-folder . --platform linux/arm64/v8,linux/amd64 --image-name yongenaelf/aelfinity-workshop --push true
 ```
 
 ## References
