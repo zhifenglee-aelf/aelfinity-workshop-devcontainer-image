@@ -1,0 +1,19 @@
+{
+  "name": "Protobuf Compiler",
+  "id": "protoc",
+  "version": "1.0.0",
+  "description": "Fetches and installs arch-specific Protobuf compiler on Debian Linux.",
+  "options": {
+      "version": {
+          "type": "string",
+          "proposals": [
+              "21.12"
+          ],
+          "default": "21.12",
+          "description": "Select a version, or enter your own"
+      }
+  },
+  "installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

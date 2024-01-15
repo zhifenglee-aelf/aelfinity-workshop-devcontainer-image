@@ -7,9 +7,11 @@
 	"features": {
 		"ghcr.io/devcontainers/features/dotnet:2": {
 			"version": "latest"
+		},
+		"./protoc": {
+			"version": "21.12"
 		}
 	},
-	"postCreateCommand": "apt-get update && apt-get install -y protobuf-compiler",
 	"containerUser": "vscode",
 	"remoteUser": "root"
 }
