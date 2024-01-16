@@ -26,4 +26,3 @@ jobs:
           imageName: ghcr.io/yongenaelf/aelfinity-workshop
           cacheFrom: ghcr.io/yongenaelf/aelfinity-workshop
           push: always
-          runCmd: make ci-build
