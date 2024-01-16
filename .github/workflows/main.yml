@@ -25,7 +25,7 @@ jobs:
       - name: Pre-build image and run make ci-build in dev container
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/yongenaelf/aelfinity-workshop
-          cacheFrom: ghcr.io/yongenaelf/aelfinity-workshop
+          imageName: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
+          cacheFrom: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
           push: always
           runCmd: source test.sh
