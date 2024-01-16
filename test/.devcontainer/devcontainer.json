@@ -3,5 +3,5 @@
 {
 	"name": "aelfinity-workshop",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "yongenaelf/aelfinity-workshop"
+	"image": "ghcr.io/yongenaelf/aelfinity-workshop"
 }
