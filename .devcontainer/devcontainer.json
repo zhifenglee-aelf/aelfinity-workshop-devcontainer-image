@@ -23,5 +23,6 @@
 	],
 	"containerEnv": {
 		"DOTNET_EnableWriteXorExecute": "0"
-	}
+	},
+	"remoteUser": "root"
 }
