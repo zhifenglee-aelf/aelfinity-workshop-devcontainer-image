@@ -13,6 +13,9 @@
 		},
 		"./aelf-command": {
 			"version": "latest"
+		},
+		"./aelf-contract-templates": {
+			"version": "latest"
 		}
 	},
 	"runArgs": [
