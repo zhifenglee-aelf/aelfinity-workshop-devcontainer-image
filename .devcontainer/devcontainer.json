@@ -10,6 +10,9 @@
 		},
 		"./protoc": {
 			"version": "21.12"
+		},
+		"./aelf-command": {
+			"version": "latest"
 		}
 	},
 	"runArgs": [

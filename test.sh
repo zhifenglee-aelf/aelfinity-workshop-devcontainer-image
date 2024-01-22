@@ -8,3 +8,4 @@ cd src
 dotnet build
 cd ../test
 dotnet test
+aelf-command -v
