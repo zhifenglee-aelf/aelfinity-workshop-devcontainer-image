@@ -15,7 +15,21 @@ jobs:
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
 
+      - name: Test image builds correctly and is able to pass all tests
+        uses: devcontainers/ci@v0.3
+        with:
+          cacheFrom: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
+          push: never
+          runCmd: source test.sh
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Login to GitHub Container Registry
+        if: steps.semantic.outputs.new_release_published == 'true'
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
@@ -23,9 +37,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pre-build image and run make ci-build in dev container
+        if: steps.semantic.outputs.new_release_published == 'true'
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
           cacheFrom: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
+          imageTag: ${{ steps.semantic.outputs.new_release_version }}, latest
           push: always
-          runCmd: source test.sh
