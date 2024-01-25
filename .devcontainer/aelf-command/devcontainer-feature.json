@@ -1,0 +1,19 @@
+{
+  "name": "aelf command",
+  "id": "aelf-command",
+  "version": "1.0.0",
+  "description": "Installs aelf command on Debian Linux.",
+  "options": {
+      "version": {
+          "type": "string",
+          "proposals": [
+              "latest"
+          ],
+          "default": "latest",
+          "description": "Select a version, or enter your own"
+      }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

@@ -1,7 +1,28 @@
-// See https://containers.dev/implementors/json_reference/ for configuration reference
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-	"name": "aelf workshop devcontainer",
-	"build": {
-		"dockerfile": "Dockerfile"
-	}
+	"name": "Debian",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "6.0"
+		},
+		"./protoc": {
+			"version": "21.12"
+		},
+		"./aelf-command": {
+			"version": "latest"
+		},
+		"./aelf-contract-templates": {
+			"version": "latest"
+		}
+	},
+	"runArgs": [
+		"--platform=linux/amd64"
+	],
+	"containerEnv": {
+		"DOTNET_EnableWriteXorExecute": "0"
+	},
+	"remoteUser": "root"
 }

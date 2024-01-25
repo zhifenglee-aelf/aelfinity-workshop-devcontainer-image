@@ -1,18 +1,25 @@
 # aelfinity workshop devcontainer image
 
-## Setup
+## Test on local
 
-- Install Docker
-- Run Docker
-- Install nodejs
-- Install the cli using `npm install -g @devcontainers/cli`
+Open this folder in VS Code, then `Command+Shift+P` to open the Command Palette.
 
-## Building and pushing the image
+Type `reopen` and choose `Dev Containers: Reopen in Container`.
+
+## Building and pushing the image on GitHub
+
+See [workflow](.github/workflows/main.yml).
+
+## Testing the image
 
 ```bash
-docker buildx create --platform linux/arm64/v8,linux/amd64 --use
-devcontainer build --workspace-folder . --platform linux/arm64/v8,linux/amd64 --image-name yongenaelf/aelfinity-workshop --push true
+cd test
+code .
 ```
+
+Type `Command+Shift+P` to open the Command Palette.
+
+Type `reopen` and choose `Dev Containers: Reopen in Container`.
 
 ## References
 
