@@ -1,5 +1,7 @@
 # aelfinity workshop devcontainer image
 
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 ## Developing on local
 
 Open this folder in VS Code, then `Command+Shift+P` to open the Command Palette.
