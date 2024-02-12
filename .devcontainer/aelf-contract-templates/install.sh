@@ -20,6 +20,7 @@ AELF_TOOLS_TARGET_PATH=/aelf-tools
 git clone -b $AELF_TOOLS_BRANCH https://github.com/AElfProject/aelf-developer-tools.git $HOME$AELF_TOOLS_TARGET_PATH
 dotnet pack -c Release -o $HOME $HOME$AELF_TOOLS_TARGET_PATH/aelf.tools/AElf.Tools -p:Version=$AELF_TOOLS_VERSION
 dotnet nuget push $HOME/AElf.Tools.1.0.5.nupkg -s LocalNuget
+echo "AElf.Tools 1.0.5 deployed"
 
 CONTRACT_TEMPLATE_VERSION=1.0.0
 CONTRACT_TEMPLATE_BRANCH=feature/acs-template
@@ -27,6 +28,7 @@ CONTRACT_TEMPLATE_TARGET_PATH=/aelf-template
 git clone -b $CONTRACT_TEMPLATE_BRANCH https://github.com/AElfProject/aelf-developer-tools.git $HOME$CONTRACT_TEMPLATE_TARGET_PATH
 dotnet pack -c Release -o $HOME $HOME$CONTRACT_TEMPLATE_TARGET_PATH/templates -p:Version=$CONTRACT_TEMPLATE_VERSION
 dotnet nuget push $HOME/AElf.ContractTemplates.1.0.0.nupkg -s LocalNuget
+echo "AElf.ContractTemplates 1.0.0 deployed"
 
 if [ $VERSION = "latest" ]; then
     dotnet new --install AElf.ContractTemplates
