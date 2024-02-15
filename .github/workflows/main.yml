@@ -18,13 +18,13 @@ jobs:
           cacheFrom: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
           push: never
           runCmd: |
-            mkdir workshop
-            cd workshop
-            dotnet new aelf
-            cd src
-            dotnet build
-            cd ../test
-            dotnet test
+            mkdir workshop &&
+            cd workshop &&
+            dotnet new aelf &&
+            cd src &&
+            dotnet build &&
+            cd ../test &&
+            dotnet test &&
             aelf-command -v
 
       - name: Semantic Release
