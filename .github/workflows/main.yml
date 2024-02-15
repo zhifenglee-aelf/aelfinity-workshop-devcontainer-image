@@ -17,7 +17,15 @@ jobs:
         with:
           cacheFrom: ghcr.io/${{ github.repository_owner }}/aelfinity-workshop
           push: never
-          runCmd: source test.sh
+          runCmd: |
+            mkdir workshop &&
+            cd workshop &&
+            dotnet new aelf &&
+            cd src &&
+            dotnet build &&
+            cd ../test &&
+            dotnet test &&
+            aelf-command -v
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
