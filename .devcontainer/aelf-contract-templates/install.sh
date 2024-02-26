@@ -20,7 +20,7 @@ AELF_TOOLS_TARGET_PATH=/aelf-tools
 git clone -b $AELF_TOOLS_BRANCH https://github.com/AElfProject/aelf-developer-tools.git $HOME$AELF_TOOLS_TARGET_PATH
 dotnet pack -c Release -o $HOME $HOME$AELF_TOOLS_TARGET_PATH/aelf.tools/AElf.Tools -p:Version=$AELF_TOOLS_VERSION
 dotnet nuget push $HOME/AElf.Tools.1.0.5.nupkg -s LocalNuget
-echo "AElf.Tools 1.0.5 deployed"
+echo "AElf.Tools $AELF_TOOLS_VERSION deployed"
 
 CONTRACT_TEMPLATE_VERSION=1.0.0
 CONTRACT_TEMPLATE_BRANCH=feature/template-1.0.0
