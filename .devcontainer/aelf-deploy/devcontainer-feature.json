@@ -1,0 +1,20 @@
+{
+  "name": "aelf deploy",
+  "id": "aelf-deploy",
+  "version": "1.0.0",
+  "description": "Installs aelf deploy on Debian Linux.",
+  "options": {
+      "version": {
+          "type": "string",
+          "proposals": [
+              "0.0.1",
+              "0.0.2"
+          ],
+          "default": "0.0.2",
+          "description": "Select a version, or enter your own"
+      }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
