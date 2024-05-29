@@ -16,6 +16,9 @@
 		},
 		"./aelf-contract-templates": {
 			"version": "latest"
+		},
+		"./aelf-deploy": {
+			"version": "0.0.2"
 		}
 	},
 	"runArgs": [

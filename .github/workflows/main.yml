@@ -26,7 +26,8 @@ jobs:
             dotnet build &&
             cd ../test &&
             dotnet test &&
-            aelf-command -v
+            aelf-command -v &&
+            aelf-deploy --version
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
