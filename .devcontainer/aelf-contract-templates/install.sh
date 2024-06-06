@@ -9,7 +9,7 @@ echo "The provided version is: $VERSION"
 mkdir -p $HOME/LocalNuget
 dotnet nuget add source $HOME/LocalNuget -n LocalNuget
 
-ACS_DIR=$HOME/aelf-proto/Protobuf
+ACS_DIR=$HOME/aelf-proto/reference
 mkdir -p $ACS_DIR
 curl -O --output-dir $ACS_DIR https://raw.githubusercontent.com/AElfProject/AElf/dev/protobuf/acs12.proto
 echo "The path of acs is: $ACS_DIR"
