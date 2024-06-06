@@ -9,7 +9,7 @@ echo "The provided version is: $VERSION"
 mkdir -p $HOME/LocalNuget
 dotnet nuget add source $HOME/LocalNuget -n LocalNuget
 
-ACS_DIR=$HOME/aelf-proto/base/aelf/acs
+ACS_DIR=$HOME/aelf-proto/Protobuf
 mkdir -p $ACS_DIR
 curl -O --output-dir $ACS_DIR https://raw.githubusercontent.com/AElfProject/AElf/dev/protobuf/acs12.proto
 echo "The path of acs is: $ACS_DIR"
@@ -23,7 +23,7 @@ dotnet nuget push $HOME/AElf.Tools.1.0.5.nupkg -s LocalNuget
 echo "AElf.Tools $AELF_TOOLS_VERSION deployed"
 
 CONTRACT_TEMPLATE_VERSION=1.0.0
-CONTRACT_TEMPLATE_BRANCH=feature/template-1.0.0
+CONTRACT_TEMPLATE_BRANCH=feature/acs-template
 CONTRACT_TEMPLATE_TARGET_PATH=/aelf-template
 git clone -b $CONTRACT_TEMPLATE_BRANCH https://github.com/AElfProject/aelf-developer-tools.git $HOME$CONTRACT_TEMPLATE_TARGET_PATH
 dotnet pack -c Release -o $HOME $HOME$CONTRACT_TEMPLATE_TARGET_PATH/templates -p:Version=$CONTRACT_TEMPLATE_VERSION
